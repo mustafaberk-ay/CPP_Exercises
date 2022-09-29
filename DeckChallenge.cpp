@@ -42,7 +42,7 @@ public:
             exit;
         }
     }
-    void newDeck() {
+    void new_deck() {
         if (deckSize < 10) {
             ++deckSize;
             numOfCards += 52;
@@ -59,7 +59,7 @@ public:
             puts("You have reached the maximum number of decks."); 
         }
     };
-    void newDeck(int n) {
+    void new_deck(int n) {
         if (deckSize + n < 10) {
             for (int i = 0; i < n; i++) {
                 ++deckSize;
@@ -78,7 +78,7 @@ public:
             puts("You have reached the maximum number of decks.");
         }
     }
-    std::vector<Card> getCards() {
+    std::vector<Card> get_cards() {
         return cards;
     }
 private:
@@ -90,8 +90,8 @@ private:
 int main()
 {
     Deck deck;
-    deck.newDeck();
-    for (Card card : deck.getCards()) {
+    deck.new_deck();
+    for (Card card : deck.get_cards()) {
         printf("%c%c ", card.rank, card.suit);
     }
     puts("");
@@ -111,7 +111,7 @@ int main()
 
     deck.shuffle_deck();
     puts("Shuffled Card Deck:");
-    for (Card card : deck.getCards()) {
+    for (Card card : deck.get_cards()) {
         printf("%c%c ", card.rank, card.suit);
     }
     puts("");
